@@ -23,7 +23,7 @@ jobs:
               run: |
                 echo "Building"
                 echo "buid_status=${{inputs.result}}" >> "$GITHUB_OUTPUT"
-                exit 1
+                
 
     deploy:
         runs-on: ubuntu-latest
