@@ -40,4 +40,4 @@ jobs:
           - name: Rollback                                     
             run: |
               echo "Rollback"
-              exit 1
+              
