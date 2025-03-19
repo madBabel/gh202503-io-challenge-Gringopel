@@ -23,6 +23,7 @@ jobs:
               run: |
                 echo "Building"
                 echo "buid_status=${{inputs.result}}" >> "$GITHUB_OUTPUT"
+                echo ${{ inputs.result}}
                 
 
     deploy:
@@ -37,7 +38,6 @@ jobs:
     
     rollback:
       runs-on: ubuntu-latest
-      needs: build
       if: ${{ needs.build.outputs.build_status == 'fail' }}
       steps:      
           - name: Rollback                                     
