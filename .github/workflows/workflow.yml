@@ -23,6 +23,7 @@ jobs:
               run: |
                 echo "Building"
                 echo "buid_status=${{inputs.result}}" >> "$GITHUB_OUTPUT"
+                echo ${{ needs.build.outputs.buid_status}}
                 
 
     deploy:
